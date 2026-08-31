@@ -22,3 +22,20 @@ const item1: Product =  {
     price: 1499.99,
     status: "unavailable"
 }
+
+// Interfaces
+interface Person {
+    name: string;
+    age: number;
+}
+
+// Using Car interface
+const person: Person = {
+    name: "person name",
+    age: 25
+}
+
+// Extends between interfaces
+interface Admin extends Person {
+    role: string
+}
