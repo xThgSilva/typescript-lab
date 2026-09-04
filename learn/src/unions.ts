@@ -56,8 +56,8 @@ function handlePayment(status: PaymentStatus) {
             break;
 
         default:
-           // TypeScript will warn us if a new PaymentStatus type is added and not handled case new type of "PaymentStatus" is added for exceptions
-            const exhaustiveCheck: never = status;
-            return exhaustiveCheck;
+           // TypeScript will warn if a new PaymentStatus type is added and not handled
+           const exhaustiveCheck: never = status;
+           return exhaustiveCheck;
     }
 }
