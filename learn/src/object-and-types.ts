@@ -67,3 +67,9 @@ function getUserProperty(user: User, key: keyof User) { // Can get any property 
 }
 
 const id = getUserProperty(user4, "id");    // TypeScript can inference through property type "id"
+
+// indexed type acess
+type User2Name = User["name"];   // User2Name is defined as string
+
+type User2Keys = keyof User2;   // "id" | "name" | "email"
+type User2Values = User2[keyof User2]   // "number" | "string" | "string", or just "number" | "string"
