@@ -38,3 +38,14 @@ function executeOperation(n1: number, n2: number, callback: (a: number,b: number
     return callback(n1, n2);
 };
 
+// Function Overloads
+// Signatures
+function convert(valor: string): number;
+function convert(valor: number): string;
+
+function convert(valor: string | number): string | number {
+    if (typeof valor === "string") 
+        return Number(valor);
+
+    return String(valor);
+}
