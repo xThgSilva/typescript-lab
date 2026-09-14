@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function getProperty(object, property) {
     return object[property];
 }
-// Objects
 const product = {
     id: 1,
     name: "Monitor",
@@ -19,7 +18,6 @@ const user = {
     name: "newuser",
     email: "newuser@email.com"
 };
-// Results
 const productPrice = getProperty(product, "price");
 const bookAuthor = getProperty(book, "author");
 const userId = getProperty(user, "id");

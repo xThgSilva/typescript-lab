@@ -37,6 +37,7 @@ console.log(calculateAverage(1, 2, 3));
 function executeOperation(n1: number, n2: number, callback: (a: number,b: number) => number) {
     return callback(n1, n2);
 };
+executeOperation(3, 4, (a, b) => a * b);
 
 // Function Overloads
 // Signatures
@@ -48,4 +49,4 @@ function convert(valor: string | number): string | number {
         return Number(valor);
 
     return String(valor);
-}
+};
