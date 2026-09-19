@@ -50,3 +50,22 @@ function convert(valor: string | number): string | number {
 
     return String(valor);
 };
+
+// Type Assertions
+function process(value: unknown) {
+    const text = value as string;
+    return text.toUpperCase();
+}
+
+console.log(process("hello"));
+console.log(process(123));  // Runtime error because TypeScript treats the value as a string,
+                            // but the actual value is still a number.
+
+const animal = {
+    specie: "Canis lupus",
+    name: "Wolf"
+} as const
+
+// animal.specie = "Lupus canis"   // as const be object properties readonly and literal value
+const roles = ["admin", "user", "guest"] as const;
+// roles.push("moderator")

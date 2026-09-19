@@ -104,3 +104,14 @@ const customer = new Customer("First Customer");
 
 console.log(admin2.getRole());    // Admin
 console.log(customer.getRole());  // Customer
+
+// Parameter Properties
+class Car {
+    // Less boilerplate code. It is the same as creating each attribute,
+    // but everything is declared directly in the constructor.
+    constructor(
+        readonly id: number,
+        public brand: string, 
+        public model: string
+    ) {};
+}
