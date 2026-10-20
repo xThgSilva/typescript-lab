@@ -69,3 +69,15 @@ const animal = {
 // animal.specie = "Lupus canis"   // as const be object properties readonly and literal value
 const roles = ["admin", "user", "guest"] as const;
 // roles.push("moderator")
+
+// satisfies
+type UserRole = "user" | "admin";
+type UserConfig = {
+    name: string,
+    role: UserRole
+};
+
+const config: UserConfig = {
+    name: "User",
+    role: "admin"
+} satisfies UserConfig;
